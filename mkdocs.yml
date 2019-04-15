@@ -9,7 +9,26 @@ theme:
   font: false
 copyright: 'Copyright © 2019 <a href="https://dsx.us">Digital Security Exchange</a>.<br/><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.'
 nav:
-  - Home: 'index.md'
+  - The DSX: 'index.md'
+  - 2018-2019 Workplan: '2018-2019-workplan.md'
+  - Intake: 'intake.md'
+  - 'Initial Consult & Assessment': 'initial-consult.md'
+  - Strategic Plan: 'strategic-plan.md'
+  - Decision: 'decision.md'
+  - Match: 'match.md'
+  - Case Management: 'case-management.md'
+  - Case Resolved: 'case-resolved.md'
+  - Case Closed: 'case-closed.md'
+  - 'Zammad Setup (Organization Onboard)':
+      - DSX helpdesk and community: 'zammad-setup-organization-onboard/dsx-helpdesk-and-community.md'
+      - Adding an Organization to Zammad: 'zammad-setup-organization-onboard/adding-an-organization-to-zammad.md'
+      - New Case Onboarding: 'zammad-setup-organization-onboard/new-case-onboarding.md'
+      - Case Tracking: 'zammad-setup-organization-onboard/case-tracking.md'
+      - Case Deletion: 'zammad-setup-organization-onboard/case-deletion.md'
+      - Archiving: 'zammad-setup-organization-onboard/archiving.md'
+
+
+
 markdown_extensions:
   - codehilite
   - admonition
