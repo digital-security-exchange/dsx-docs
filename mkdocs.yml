@@ -1,0 +1,20 @@
+site_name: DSX Documentation
+theme:
+  name: 'material'
+  logo: 'images/favicon.png'
+  favicon: 'images/favicon.png'
+  palette:
+    primary: 'indigo'
+    accent: 'cyan'
+  font: false
+copyright: 'Copyright © 2019 <a href="https://dsx.us">Digital Security Exchange</a>.<br/><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.'
+nav:
+  - Home: 'index.md'
+markdown_extensions:
+  - codehilite
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
