@@ -1,4 +1,4 @@
-SHELL         := /bin/bash 
+SHELL         := /bin/bash
 UNAME_S       := $(shell uname -s)
 CURR_BRANCH   := $(shell git rev-parse --abbrev-ref HEAD)
 DEPLOY_BRANCH := master
@@ -46,7 +46,8 @@ deploy:
 		echo "The docs can only be deployed from the $(DEPLOY_BRANCH) branch"; \
 		exit 1;\
 	fi
-	@if [[ 0 == $$(git diff-index --quiet HEAD --) ]]; then \
+	@git diff-index --quiet HEAD -- ; \
+	if [[ "0" == "$$?" ]]; then \
 		@source $(VENVW); \
 		workon dsx-docs; \
 		mkdocs gh-deploy; \
