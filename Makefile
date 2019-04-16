@@ -13,8 +13,8 @@ ifeq ($(UNAME_S),Darwin)
 macos_install:
 	brew install python3 
 	pip3 install virtualenv virtualenvwrapper
-	@grep -qxF 'VIRTUALENVWRAPPER_PYTHON' ~/.bashrc || echo 'export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3' >> ~/.bashrc
-	@grep -qxF '/usr/local/bin/virtualenvwrapper.sh' ~/.bashrc || echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
+	@grep -qF 'VIRTUALENVWRAPPER_PYTHON' ~/.bashrc || echo 'export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3' >> ~/.bashrc
+	@grep -qF '/usr/local/bin/virtualenvwrapper.sh' ~/.bashrc || echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
 
 .PHONY: macos_setup
 macos_setup: macos_install
