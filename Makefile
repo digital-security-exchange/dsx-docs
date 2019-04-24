@@ -11,14 +11,18 @@ endif
 ifeq ($(UNAME_S),Darwin)
 .PHONY: macos_install
 macos_install:
-	brew install python3 
+	brew install python3
 	pip3 install virtualenv virtualenvwrapper
+	@touch ~/.bashrc
+	@touch ~/.bash_profile
+	@grep -qF '.bashrc' ~/.bash_profile || echo '[ -r ~/.bashrc ] && source ~/.bashrc' >> ~/.bash_profile
 	@grep -qF 'VIRTUALENVWRAPPER_PYTHON' ~/.bashrc || echo 'export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3' >> ~/.bashrc
 	@grep -qF '/usr/local/bin/virtualenvwrapper.sh' ~/.bashrc || echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
 
 .PHONY: macos_setup
 macos_setup: macos_install
-	@source $(VENVW); \
+	@source ~/.bashrc; \
+	source $(VENVW); \
 	lsvirtualenv  | grep -x dsx-docs ||  mkvirtualenv -r requirements.txt  dsx-docs
 	echo
 	echo "Setup complete. To view the docs, run:  make serve"
