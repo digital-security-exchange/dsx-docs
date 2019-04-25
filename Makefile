@@ -52,7 +52,7 @@ deploy:
 	fi
 	@git diff-index --quiet HEAD -- ; \
 	if [[ "0" == "$$?" ]]; then \
-		@source $(VENVW); \
+		source $(VENVW); \
 		workon dsx-docs; \
 		mkdocs gh-deploy; \
 	else \
