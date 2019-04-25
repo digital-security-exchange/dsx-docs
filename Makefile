@@ -60,3 +60,5 @@ deploy:
 		echo "Please commit all changes"; \
 	fi
 
+.PHONY: publish
+publish: deploy
